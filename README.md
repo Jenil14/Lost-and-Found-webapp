@@ -1,4 +1,4 @@
-### University of California Davis: Lost and Found Website 
+# University of California Davis: Lost and Found Website 
 ## Introduction
 This web app is UCD's (University of California Davis) lost and found website. There is no exisiting university's lost and found location (virtually and physically). 
 
