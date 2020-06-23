@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo44nu7GrfNsvddvTsyC8rSqnsYVU-r5o&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body onload="loadscreen8()" id="bodyForLost">
+    
+    <div id="logo" onclick = "imageRedirect()">
+      <img id="davisLogo" src="https://cdn.glitch.com/b3c81db2-94e1-4b3c-8dcb-3b0cd0e50753%2FLogo.png?v=1590601982170" alt="UC Davis Logo">
+    </div>
+    
+    
+    <h1>Search for existing items</h1>
+    <div class="searchBox" onclick = "existingItemRedirect()">
+      <label id="searchQ">
+        <input type="text" id="searchInput" name="search">
+      </label>
+    </div>
+    
+    <br>
+<!--     <h1>Input the Found Item</h1> -->
+    <div class="boxForMain">
+      <form class="main">
+        <label for="date">Date & Time</label> <br />
+        <input type="date" id="startDate" name="startDate" />
+        <input type="time" id="startTime" name="startTime" />
+        <label for="endDate">to</label>
+        <input type="date" id="endDate" name="startDate" />
+        <input type="time" id="endTime" name="startTime" /><br /><br />
+        
+        <label for="category">Category</label><br>
+        <input list="categories" name="category" id="category">
+          <datalist id="categories">
+            <option value="Electronics"></option>
+            <option value="Collectibles & Art"></option>
+            <option value="Clothing"></option>
+            <option value="Drinkware/Foodware"></option>
+            <option value="Keys"></option>
+            <option value="Sporting Goods"></option>
+            <option value="School Supplies"></option>
+          </datalist>
+        <br>
+        
+        <label for="location">Location</label>
+                 <div class="autocomplete">
+          <input type="text" id="location" name="location" /><br /><br />
+        </div>
+      </form>
+
+      <div class="mapPadding">
+        <div id="map"></div>
+      </div>
+
+      <button class="button" id="searchScreen8">Search</button>
+    </div>
+
+    <!--<div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>-->
+                <script>
+autocomplete(document.getElementById("location"), buildings);
+</script> 
+  </body>
+</html>

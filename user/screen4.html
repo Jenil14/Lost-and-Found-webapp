@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyDo44nu7GrfNsvddvTsyC8rSqnsYVU-r5o&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <link rel="stylesheet" href="screens.css" />
+    <script src="screens.js"></script>
+  </head>
+  <body onload="loadscreen4()" id="bodyForFound">
+    
+    <div id="logo" onclick = "imageRedirect()">
+      <img id="davisLogo" src="https://cdn.glitch.com/b3c81db2-94e1-4b3c-8dcb-3b0cd0e50753%2FLogo.png?v=1590601982170" alt="UC Davis Logo">
+    </div>
+    
+    <h1>Input the found item</h1>
+    <div class="boxForMain">
+      
+      <form class="main"  autocomplete="off" id = "inputForm">
+        <label for="date">Date & Time</label><br>
+        <input type="date" id="date" name="date" 
+               value="2020-06-03"
+               min="2020-01-01" max="2021-12-31"/>
+        <input type="time" id="time" name="time" 
+               min="0:00" max="24:00" required/><br /><br />
+                  
+        <label for="location">Location</label>
+        <div class="autocomplete">
+          <input type="text" id="location" name="location" /><br /><br />
+        </div>
+        
+      </form>
+
+      <div class="mapPadding">
+        <div id="map"></div>
+      </div>
+      
+
+      <button class="subButton" id="submitFound" onclick = "imageRedirect()" >Submit</button>
+    </div>
+    
+    <h1>Or search for existing requests</h1>
+    <div class="searchBox" onclick = "existingRequestRedirect()">
+      <label id="searchQ">
+        <input type="text" id="searchInput" name="search">
+      </label>
+    </div>
+
+    <!--<div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>-->
+    <script>
+autocomplete(document.getElementById("location"), buildings);
+</script> 
+  </body>
+
+
+  
+</html>
