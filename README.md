@@ -10,6 +10,6 @@ The user can either search the exisiting database or enter the new lost item by 
 3. location of the item
 
 ## Team
-Team Members:  **Jenil Shah, Pedro Aramburo, Sammi Rowen**
+Team Members:  Jenil Shah, Pedro Aramburo, Sammi Rowen
 
 
