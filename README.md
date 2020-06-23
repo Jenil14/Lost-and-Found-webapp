@@ -1,14 +1,15 @@
-Members:  Jenil Shah, Pedro Aramburo, Sammi Rowen
+### University of California Davis: Lost and Found Website 
+## Introduction
+This web app is UCD's (University of California Davis) lost and found website. There is no exisiting university's lost and found location (virtually and physically). 
 
-Screen 4 and 7 both redirect to screen 2 once the user is done inputting their information, so they can then check to see if anyone's found anything/add the item as lost if there was nothing to be found already in the database.
-This is also because going to screen 10 would give an error since you inputted the beginning date but there is no end date in this query, which is required for screen 9 and 10.
-As a result it ends up outputting an error.
+If the user has lost any item, then the user can log in only through their UC Davis email and get access to the database. The user can select campus buildings, or just places (like the quad) on the Google map.  After clicking on something for which Google returns a name, they can confirm that it is the location they meant. However, if the user has found an item, then the user also gets to search or enter a new found item.  They see a similar set of menus, and map, and they also have the option to upload  a picture of the item.  They can also specify what they did with the item (turned it into an office, kept it, left it where it was). 
 
-We implemented screen 9 and 10 as a table, so our styling looks a bit different than the example, but is still collapsible and usable.
-The main differences are with the title being to the side of the information rather than above, which is because we implemented it as a cell in the same row as the more button, and ran out of time to change this. However, it still shows all the information and I think it still looks clean.
-Because of this, we also changed the mobile design to look like a column, so the image is above the information, however, designs for mobile often work better when they are narrow like columns, so I think it still completes its functionality and intention.
-Lastly, because of our table implementation, we couldn't change the 'MORE' button to 'LESS,' because we appended the hidden elements (category, description, etc), so when trying to change that it changes all of that information.
-We would fix this if we had more time, but you can still open/close the tabs by pressing on them, it just doesn't say 'less.'
+The user can either search the exisiting database or enter the new lost item by the following categories:
+1. date and time they believe they lost the item
+2. kind of item, including an "other" category if nothing fits the text description 
+3. location of the item
 
+## Team
+Team Members:  **Jenil Shah, Pedro Aramburo, Sammi Rowen**
 
 
