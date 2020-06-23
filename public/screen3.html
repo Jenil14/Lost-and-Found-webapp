@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js"></script>
+  </head>  
+  <body onload="loadscreen3()" id="bodyForFound">
+    
+    <div id="logo" onclick = "imageRedirect()">
+      <img id="davisLogo" src="https://cdn.glitch.com/b3c81db2-94e1-4b3c-8dcb-3b0cd0e50753%2FLogo.png?v=1590601982170" alt="UC Davis Logo">
+    </div>
+    <h1>Input the found item </h1>
+    <div class="boxForMain">
+      <form class="main">
+        <label for="title">Title</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="category">Category</label><br>
+        <input list="categories" name="category" id="category">
+          <datalist id="categories">
+            <option value="Electronics"></option>
+            <option value="Collectibles & Art"></option>
+            <option value="Clothing"></option>
+            <option value="Drinkware/Foodware"></option>
+            <option value="Keys"></option>
+            <option value="Sporting Goods"></option>
+            <option value="School Supplies"></option>
+          </datalist>
+        <br>
+        <label for="description">Description</label><br>
+        <input type="text" id="description" name="description"><br>
+      
+        <form method="post" enctype="multipart/form-data">
+            <label for="imgUpload">Attach a photo (optional)</label><br>
+            <input id="imgUpload" type="file" accept="image/*" name="photo"/> 
+        </form>
+        
+        <button class="button" id="nextFound">Next</button>
+      </form>
+      
+      
+    </div>
+    
+    <h1>Or search for existing requests</h1>
+    <div class="searchBox" onclick = "existingRequestRedirect()">
+      <label id="searchQ">
+        <input type="text" id="searchInput" name="search">
+      </label>
+    </div>
+    
+    
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+   <!-- <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>-->
+  </body>
+</html>
